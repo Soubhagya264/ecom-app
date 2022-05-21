@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
-import sliderData from "../data";
+import {sliderData} from "../data";
 import { useState } from "react";
 const Container = styled.div`
 width: 100%;
@@ -90,18 +90,19 @@ flex: 1;
 `
 
 const Slider = () => {
+    var newSlide;
      const [slideIndex, setSlideIndex] = useState(0);
      const[slidedir, setSlidedir] = useState(0);
 
     const handleClick = (direction) => {
         if (direction === "left") {
             setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
-            var newSlide = slideIndex*-100
-            console.log(newSlide)
+            newSlide = slideIndex*-100
+            
             setSlidedir(newSlide);
         } else {
             setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
-            var newSlide = slideIndex*-100
+            newSlide = slideIndex*-100
             setSlidedir(newSlide);
             
         }
