@@ -1,6 +1,6 @@
 import React from "react";
 import SearchIcon from '@mui/icons-material/Search';
-import Stack from '@mui/material/Stack';
+
 import Badge from '@mui/material/Badge';
 
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -8,6 +8,7 @@ import styled from "styled-components";
 const Container = styled.div`
 
   height: 60px;
+  
   
 `;
 const Wrapper = styled.div`
